@@ -1,7 +1,7 @@
 package konfektion;
 
 public enum SizeBot {
-    HELLO("Hy I'm your Assistant to find your perfect size! Please anwser the anwsers!"),
+    HELLO("Hy I'm  Fashion Goddess Babsi. I'm here to help you find your perfect size! Please anwser the questions below!"),
     BUSTSIZE("Enter your Bust circumference"),
     HEIGHT("Enter your Height"),
     GENDER("Are you a boy(enter 0) or a girl(enter 1)");
