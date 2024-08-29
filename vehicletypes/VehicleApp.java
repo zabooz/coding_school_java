@@ -103,7 +103,7 @@ class Bicycle extends Vehicles  {
 
 public class VehicleApp {
 
-    public static void vehicleTypes(Scanner scanner) {
+    public static void vehicleTypes(Scanner scanner) throws InterruptedException {
 
         System.out.println("Hy my name is Marv, but you can call me Boss,  should i build a ride for ya'? ");
         System.out.println("Yes(1)\nNo(0)");
@@ -138,10 +138,10 @@ public class VehicleApp {
             System.out.println("\nWow, that was deep man, im sorry for that. \n  ");
 
             System.out.println("Ok here are the vehicles you can buy.\nCar(1)\nPlane(2)\nBicycle(3)\nTruck(4)");
-            choice = scanner.nextByte();
+            byte choice1 = scanner.nextByte();
 
             Vehicles obj;
-            switch (choice) {
+            switch (choice1) {
 
                 case 1:
                     obj = new Car();
@@ -155,7 +155,7 @@ public class VehicleApp {
                     obj = new Car();
             }
 
-            System.out.println("What do you want to know about it?\nUnique Selling Point(1) \n nothing(0)");
+            System.out.println("What do you want to know about it?\nUnique Selling Point(1)\n Show me the vehicle(2) \n nothing(0)");
 
             choice = scanner.nextByte();
 
@@ -164,6 +164,11 @@ public class VehicleApp {
                 
                 obj.sellingPoint();
                 System.out.println("\nHave fun with it, im too tired to write more code. Now get lost.\n");
+            }else if(choice == 2){
+            VehicleAnimation obj1 = new VehicleAnimation();
+
+            obj1.startAnimation(choice1);
+                
             }
             else
                 System.out.println("bye");
